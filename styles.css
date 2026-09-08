@@ -1,0 +1,377 @@
+:root {
+  --paper: #ede7d8;
+  --paper-raised: #f6f2e6;
+  --ink: #1e2a1f;
+  --ledger-navy: #1b2a4a;
+  --rule: #a99b7d;
+  --mustard: #c68a2e;
+  --teal: #2f6f62;
+  --teal-soft: #e4ede9;
+
+  --font-display: "Source Serif 4", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-body: "IBM Plex Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  color: var(--ledger-navy);
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 62ch;
+}
+
+a {
+  color: var(--teal);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--teal);
+  letter-spacing: 0.03em;
+  margin: 0 0 0.4em;
+}
+
+/* ---------- Header / nav ---------- */
+
+.site-header {
+  border-bottom: 2px solid var(--ledger-navy);
+  background: var(--paper-raised);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand-dot {
+  color: var(--mustard);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.nav-links li + li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom-color: var(--mustard);
+}
+
+/* ---------- Sections shared ---------- */
+
+.section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section--contact {
+  border-bottom: none;
+}
+
+/* ---------- Sobre mí ---------- */
+
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.about-photo {
+  flex: 0 0 160px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.photo-frame {
+  width: 160px;
+  height: 160px;
+  background: var(--ledger-navy);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+}
+
+.photo-caption {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+  color: var(--ink);
+}
+
+.about-text {
+  flex: 1 1 380px;
+}
+
+.about-text h1 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.25;
+}
+
+.about-aside {
+  flex: 0 0 220px;
+  align-self: center;
+  background: var(--teal-soft);
+  border-left: 3px solid var(--teal);
+  padding: 1rem 1.2rem;
+}
+
+.aside-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--teal);
+  margin: 0 0 0.5em;
+}
+
+.about-aside blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ledger-navy);
+}
+
+/* ---------- Proyectos ---------- */
+
+.project-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  flex: 1 1 260px;
+  min-width: 240px;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--mustard);
+  padding: 1.4rem;
+}
+
+.entry-no {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--teal);
+  margin: 0 0 0.6em;
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4em;
+}
+
+.project-tags {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--teal);
+}
+
+/* ---------- Habilidades ---------- */
+
+.chip-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--ledger-navy);
+  padding: 0.45rem 0.9rem;
+}
+
+/* ---------- Contacto ---------- */
+
+.contact-intro {
+  max-width: 52ch;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 440px;
+  margin-top: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ledger-navy);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--rule);
+  background: var(--paper-raised);
+  color: var(--ink);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: var(--ledger-navy);
+  color: var(--paper);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: var(--teal);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 2.5rem 1.5rem;
+  background: var(--ledger-navy);
+  color: var(--paper);
+}
+
+.footer-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.social-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.social-link {
+  color: var(--paper);
+  display: flex;
+}
+
+.social-link:hover {
+  color: var(--mustard);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 700px) {
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .about-photo,
+  .about-aside {
+    align-self: center;
+    flex: none;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    gap: 1rem 1.2rem;
+  }
+
+  .section {
+    padding: 3rem 1.2rem;
+  }
+}
