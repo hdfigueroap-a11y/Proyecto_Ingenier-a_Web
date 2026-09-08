@@ -28,7 +28,6 @@ Portafolio profesional para mostrar perfil, proyectos y habilidades a reclutador
 
 - `index.html` — estructura semántica de la página.
 - `styles.css` — estilos y layout Flexbox.
-- `captura-desktop-1280px.png` / `captura-mobile-375px.png` — capturas de pantalla en dos tamaños de viewport.
 
 ## Stack
 
