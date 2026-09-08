@@ -139,13 +139,9 @@ a {
 .photo-frame {
   width: 160px;
   height: 160px;
+  object-fit: cover;
+  display: block;
   background: var(--ledger-navy);
-  color: var(--paper);
-  font-family: var(--font-mono);
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 3px solid var(--ink);
 }
 
